@@ -1,0 +1,31 @@
+# 🧩 Custom Nodes Installés
+
+- CRT-Nodes
+- ComfyUI-CacheDiT
+- ComfyUI-CameraForensicRealism
+- ComfyUI-Custom-Scripts
+- ComfyUI-EulerDiscreteScheduler
+- ComfyUI-GGUF
+- ComfyUI-Impact-Pack
+- ComfyUI-Impact-Subpack
+- ComfyUI-Inpaint-CropAndStitch
+- ComfyUI-JoyCaption
+- ComfyUI-KJNodes
+- ComfyUI-Manager
+- ComfyUI-SAM3
+- ComfyUI-SaveImageWithMetaData
+- ComfyUI-ZImage-LoRA-Merger
+- ComfyUI-ZenFaceDetailer
+- ComfyUI-mnemic-nodes
+- ComfyUI_Comfyroll_CustomNodes
+- ComfyUI_LFM2-350M
+- ComfyUI_StarNodes
+- ComfyUI_essentials
+- HydroSharksampler
+- RES4LYF
+- cg-use-everywhere
+- comfyui-advanced-denoiser
+- comfyui-quantum-spectral-nodes
+- controlaltai-nodes
+- rgthree-comfy
+- was-node-suite-comfyui

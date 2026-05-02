@@ -23,6 +23,7 @@
 - ComfyUI_essentials
 - HydroSharksampler
 - RES4LYF
+- ResolutionScaler
 - cg-use-everywhere
 - comfyui-advanced-denoiser
 - comfyui-quantum-spectral-nodes

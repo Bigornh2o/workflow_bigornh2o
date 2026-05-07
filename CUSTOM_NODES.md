@@ -1,6 +1,7 @@
 # 🧩 Custom Nodes Installés
 
 - CRT-Nodes
+- ComfyUI-Bigornh2oSmartResolution
 - ComfyUI-CacheDiT
 - ComfyUI-CameraForensicRealism
 - ComfyUI-Custom-Scripts

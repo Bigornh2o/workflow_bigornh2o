@@ -2,6 +2,8 @@
 
 ## 📦 checkpoints
 - LUSTIFY_[SDXL_NSFW_checkpoint].safetensors
+- cyberrealisticPony_v127Alt.safetensors
+- hyphoriaRealIllu_v09.safetensors
 - octopussmixs_v3.safetensors
 
 ## 📦 diffusion_models
@@ -13,7 +15,10 @@
 - RealLORA.safetensors
 - Sally_Lokr.safetensors
 - Z-Image-fac1al.safetensors
+- add-detail-xl.safetensors
 - clarazelyy_v3.safetensors
+- clarazelyy_v4.safetensors
+- clarazelyy_z.safetensors
 - instagram_zimageturbo.safetensors
 - mila.safetensors
 - nicegirls_Zimage.safetensors

@@ -40,7 +40,7 @@
         "strength": 1.2
       },
       "lora_2": {
-        "on": true,
+        "on": false,
         "lora": "WeightSlider-KREA2_v2.safetensors",
         "strength": 0.25
       },
@@ -136,7 +136,7 @@
   },
   "9": {
     "inputs": {
-      "text": "l4cie, a casual front-camera selfie taken on an iPhone inside a car, the phone held close and slightly above so both faces fill most of the frame with noticeable wide-angle distortion and a clear tilt. She sits in the passenger seat leaning toward the center, head tilted back and to her left, wearing a black oversized hoodie with the hood up and white text running vertically along the side of the hood. Her long hair spills out from under the hood and falls over her right shoulder and chest. Her eyes look up toward the phone, lids slightly lowered, mouth open with her tongue stuck out to the side and the corners of her lips lifted. Next to her in the driver\u2019s seat is a man with light stubble along his jaw and upper lip, messy medium-length brown hair sticking out from under a black baseball cap worn backwards, a small silver hoop earring in his left ear. He wears a plain white t-shirt, a silver ring on his right index finger and a thin bracelet on his left wrist. His face is angled toward the camera, eyes looking straight into the lens, mouth wide open with his tongue fully extended and teeth visible, while his right hand is raised in a peace sign close to his cheek. The car interior shows a dark grey ceiling with a sunroof panel above them, part of the rearview mirror and a black seat with partial white lettering visible behind the woman. Daylight comes through the windows, mixed with the dimmer light inside the car, leaving soft shadows under their chins and along the folds of the hoodie. The whole shot stays mostly in focus from their faces to the car ceiling. Mild digital noise shows in the darker areas of the ceiling, a couple of flyaway hairs cross the frame near her shoulder, the photo tilts a few degrees to the left, and the bottom edge cuts off across their chests.",
+      "text": "l4cie, a casual front-camera selfie taken on an iPhone indoors, the phone held close and slightly below her chin so her face and upper chest fill most of the frame with slight wide-angle distortion at the edges. She sits or leans forward, head tilted a little to her left, right hand propped under her chin with the palm supporting her jaw and fingers curled loosely near her cheek. She wears a white ribbed tank top with thin straps and a delicate lace trim along the neckline, a thin gold chain with a small cross pendant resting on her chest. Her long hair falls straight and heavy over both shoulders and down her front, several strands resting against her collarbones and chest. Her eyes look straight into the lens, lids slightly lowered, and her lips are closed in a small smile with the corners gently lifted. Behind her a plain light-grey wall fills the background, a round mirror hangs on the left, a doorway or closet appears on the right, and the edge of a bed or sofa shows at the bottom. Soft indoor daylight comes from the left, leaving gentle shadows under her chin and along the side of her face. The whole close-up stays mostly in focus. Mild digital noise shows in the darker areas near the wall, a couple of flyaway hairs cross the frame, the photo tilts a few degrees to the right, and the bottom edge cuts off just below her chest.",
       "clip": [
         "5",
         1
@@ -213,7 +213,7 @@
   },
   "18": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.7,
       "sampler_name": "exponential/res_2s",
       "steps_to_run": 4,
       "cfg": 1.0,
@@ -243,7 +243,7 @@
   },
   "19": {
     "inputs": {
-      "eta": 0.5,
+      "eta": 0.7,
       "sampler_name": "exponential/ddim",
       "steps_to_run": -1,
       "cfg": 1.0,

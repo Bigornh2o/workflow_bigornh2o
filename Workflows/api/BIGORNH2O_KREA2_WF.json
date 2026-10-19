@@ -90,7 +90,7 @@
   },
   "7": {
     "inputs": {
-      "seed": 676993695736217
+      "seed": 537559115673143
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -271,17 +271,22 @@
       "title": "ClownsharkChainsampler"
     }
   },
-  "21": {
+  "22": {
     "inputs": {
-      "filename_prefix": "Krea2_",
+      "filename_prefix": "IMG",
+      "format": "png",
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16 Pro Max",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
       "images": [
         "13",
         0
       ]
     },
-    "class_type": "SaveImage",
+    "class_type": "SaveImageWithFakeEXIF",
     "_meta": {
-      "title": "Save Image"
+      "title": "Save Image (Fake EXIF)"
     }
   }
 }

@@ -1,9 +1,11 @@
 """Handler Runpod Serverless : ComfyUI (Krea 2) -> Google Drive via rclone.
 
-Entrée  : {"input": {"prompt": "...", "negative": "...", "seed": 123, "count": 1,
-                     "folder": "2026-10/2026-10-18", "overrides": {"11.megapixels": 2.0}}}
-Sortie  : {"status": "ok", "files": [{"file", "drive_path", "seed"}], "drive_folder", "seconds"}
-Seul "prompt" est obligatoire.
+Entrée  : {"input": {"prompt": "...", "workflow": "KREA2", "negative": "...", "seed": 123, "count": 1,
+                     "folder": "2026-10/2026-10-18", "overrides": {"11.megapixel": "2.4"}}}
+Sortie  : {"status": "ok", "workflow", "files": [{"file", "drive_path", "seed"}], "drive_folder", "seconds"}
+Seul "prompt" est obligatoire. "workflow" = nom du fichier dans Workflows/api/ (avec ou sans .json),
+KREA2.json par défaut. Nœuds repérés par leur titre ComfyUI : API_PROMPT, API_NEGATIVE, API_SEED, API_SAVE ;
+à défaut, ids 9 / 10 / 7 / 21 (KREA2.json n'a pas besoin de titres).
 """
 import base64
 import filecmp
@@ -38,12 +40,9 @@ JOB_TIMEOUT = int(os.environ.get("JOB_TIMEOUT", "900"))
 
 GITHUB_REPO = os.environ.get("GITHUB_REPO", "Bigornh2o/workflow_bigornh2o")
 GITHUB_BRANCH = os.environ.get("GITHUB_BRANCH", "main")
-WORKFLOW_NAME = os.environ.get("WORKFLOW_NAME", "BIGORNH2O - KREA2 WF SIMPLE PASS.json")
-WORKFLOW_URL = os.environ.get("WORKFLOW_URL") or (
-    f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}"
-    f"/Workflows/api/{urllib.parse.quote(WORKFLOW_NAME)}"
-)
-WORKFLOW_CACHE = "/tmp/workflow_cache.json"
+WORKFLOW_NAME = os.environ.get("WORKFLOW_NAME", "KREA2.json")  # workflow par défaut
+WORKFLOW_BASE = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/Workflows/api/"
+WORKFLOW_CACHE_DIR = "/tmp/workflow_cache"
 
 NODE_PROMPT = os.environ.get("NODE_PROMPT", "9")
 NODE_NEGATIVE = os.environ.get("NODE_NEGATIVE", "10")
@@ -160,22 +159,43 @@ def comfy_post(path, payload):
 
 
 # ── Workflow ──────────────────────────────────────────────────────────────────
-def fetch_workflow():
-    """Télécharge le JSON API depuis GitHub raw à chaque job (copie locale en secours)."""
+def clean_workflow_name(name):
+    name = (name or WORKFLOW_NAME).strip()
+    if not name.lower().endswith(".json"):
+        name += ".json"
+    if "/" in name or "\\" in name or ".." in name:
+        raise ValueError("input.workflow invalide : nom de fichier seul, sans dossier")
+    return name
+
+
+def fetch_workflow(name=None):
+    """Télécharge Workflows/api/<name> depuis GitHub raw à chaque job (copie locale en secours)."""
+    name = clean_workflow_name(name)
+    os.makedirs(WORKFLOW_CACHE_DIR, exist_ok=True)
+    cache = os.path.join(WORKFLOW_CACHE_DIR, name)
     try:
-        req = urllib.request.Request(WORKFLOW_URL, headers={"User-Agent": "runpod-comfy-handler"})
+        req = urllib.request.Request(WORKFLOW_BASE + urllib.parse.quote(name),
+                                     headers={"User-Agent": "runpod-comfy-handler"})
         with urllib.request.urlopen(req, timeout=20) as r:
             data = r.read()
         wf = json.loads(data)
-        with open(WORKFLOW_CACHE, "wb") as f:
+        with open(cache, "wb") as f:
             f.write(data)
         return wf
     except Exception as e:
-        if os.path.isfile(WORKFLOW_CACHE):
+        if os.path.isfile(cache):
             log(f"GitHub injoignable ({e}), copie locale utilisée")
-            with open(WORKFLOW_CACHE) as f:
+            with open(cache) as f:
                 return json.load(f)
-        raise RuntimeError(f"Téléchargement du workflow impossible : {e}")
+        raise RuntimeError(f"Workflow '{name}' introuvable dans Workflows/api/ : {e}")
+
+
+def find_node(wf, role, default_id):
+    """Nœud dont le titre ComfyUI est `role` (ex. API_PROMPT), sinon l'id par défaut."""
+    for nid, node in wf.items():
+        if isinstance(node, dict) and str((node.get("_meta") or {}).get("title", "")).strip().upper() == role:
+            return nid
+    return str(default_id)
 
 
 def node_inputs(wf, node_id):
@@ -210,9 +230,9 @@ def run_workflow(wf):
     raise TimeoutError(f"génération > {JOB_TIMEOUT}s")
 
 
-def output_files(entry):
+def output_files(entry, save_id):
     outs = entry.get("outputs", {})
-    imgs = (outs.get(str(NODE_SAVE)) or {}).get("images") or [
+    imgs = (outs.get(str(save_id)) or {}).get("images") or [
         i for o in outs.values() for i in o.get("images", []) if i.get("type") == "output"
     ]
     return [os.path.join(OUT_DIR, i.get("subfolder", ""), i["filename"]) for i in imgs]
@@ -251,6 +271,7 @@ def handler(job):
     if not prompt:
         return {"error": "input.prompt manquant"}
     try:
+        wf_name = clean_workflow_name(inp.get("workflow"))
         count = max(1, min(int(inp.get("count", 1)), 8))
         seed0 = int(inp["seed"]) if inp.get("seed") is not None else random.randint(0, 2**32 - 1)
         now = datetime.now(TZ)
@@ -263,23 +284,24 @@ def handler(job):
 
         results = []
         for i in range(count):
-            wf = fetch_workflow()
+            wf = fetch_workflow(wf_name)
             seed = seed0 + i
-            set_text(wf, NODE_PROMPT, prompt)
+            set_text(wf, find_node(wf, "API_PROMPT", NODE_PROMPT), prompt)
             if inp.get("negative") is not None:
-                set_text(wf, NODE_NEGATIVE, str(inp["negative"]))
-            node_inputs(wf, NODE_SEED)["seed"] = seed
-            for key, val in (inp.get("overrides") or {}).items():  # "11.megapixels": 2.0
+                set_text(wf, find_node(wf, "API_NEGATIVE", NODE_NEGATIVE), str(inp["negative"]))
+            node_inputs(wf, find_node(wf, "API_SEED", NODE_SEED))["seed"] = seed
+            for key, val in (inp.get("overrides") or {}).items():  # "11.megapixel": "2.4"
                 nid, name = key.split(".", 1)
                 node_inputs(wf, nid)[name] = val
 
-            for path in output_files(run_workflow(wf)):
+            for path in output_files(run_workflow(wf), find_node(wf, "API_SAVE", NODE_SAVE)):
                 results.append({"file": os.path.basename(path), "drive_path": upload(path, dest), "seed": seed})
                 os.remove(path)
 
         if not results:
-            return {"error": "aucune image produite par le nœud SaveImage"}
-        return {"status": "ok", "files": results, "drive_folder": dest, "seconds": round(time.time() - t0, 1)}
+            return {"error": "aucune image produite par le workflow"}
+        return {"status": "ok", "workflow": wf_name, "files": results, "drive_folder": dest,
+                "seconds": round(time.time() - t0, 1)}
     except Exception as e:
         log(traceback.format_exc())
         return {"error": f"{type(e).__name__}: {e}"}

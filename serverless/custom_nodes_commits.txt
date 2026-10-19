@@ -1,0 +1,23 @@
+ComfyUI-Bigornh2oSmartResolution b9e701a https://github.com/Bigornh2o/ComfyUI-Bigornh2oSmartResolution.git
+ComfyUI-Custom-Scripts 609f3af https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git
+ComfyUI-EulerDiscreteScheduler eb5bd4d https://github.com/erosDiffusion/ComfyUI-EulerDiscreteScheduler.git
+ComfyUI-FakeEXIF b343f0a https://github.com/Bigornh2o/ComfyUI-FakeEXIF.git
+ComfyUI-GGUF 6ea2651 https://github.com/city96/ComfyUI-GGUF.git
+ComfyUI-Impact-Pack 429d015 https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
+ComfyUI-Impact-Subpack 50c7b71 https://github.com/ltdrdata/ComfyUI-Impact-Subpack.git
+ComfyUI-Inpaint-CropAndStitch c2c2a41 https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch.git
+ComfyUI-JoyCaption a0e9f0a https://github.com/1038lab/ComfyUI-JoyCaption.git
+ComfyUI-Krea2T-Enhancer  https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer.git
+ComfyUI-Manager c4fefd47 https://github.com/ltdrdata/ComfyUI-Manager
+ComfyUI-SAM3 043b548 https://github.com/PozzettiAndrea/ComfyUI-SAM3.git
+ComfyUI-SaveImageWithMetaData c9a8745 https://github.com/nkchocoai/ComfyUI-SaveImageWithMetaData.git
+ComfyUI-VAE-Utils 4c62ea0 https://github.com/spacepxl/ComfyUI-VAE-Utils.git
+ComfyUI-ZImage-LoRA-Merger 098b728 https://github.com/DanrisiUA/ComfyUI-ZImage-LoRA-Merger
+ComfyUI-ZenFaceDetailer d88b2d6 https://github.com/MONKEYFOREVER2/ComfyUI-ZenFaceDetailer
+ComfyUI-mnemic-nodes d9314d0 https://github.com/MNeMoNiCuZ/ComfyUI-mnemic-nodes.git
+ComfyUI_LFM2-350M 55d662a https://github.com/marduk191/ComfyUI_LFM2-350M.git
+ComfyUI_StarNodes 7ba2597 https://github.com/Starnodes2024/ComfyUI_StarNodes.git
+RES4LYF 56e4475 https://github.com/ClownsharkBatwing/RES4LYF.git
+ResolutionScaler fc3722d https://github.com/Bigornh2o/ResolutionScaler.git
+rgthree-comfy 8ff50e4 https://github.com/rgthree/rgthree-comfy.git
+was-node-suite-comfyui afeee09 https://github.com/ltdrdata/was-node-suite-comfyui.git

@@ -205,12 +205,20 @@ def node_inputs(wf, node_id):
     return node.setdefault("inputs", {})
 
 
-def set_text(wf, node_id, text):
+def set_text(wf, node_id, text, _depth=0):
+    """Écrit `text` dans le nœud. Si son champ texte est branché sur un autre nœud
+    (ex. CLIPTextEncode <- CR Prompt List), suit le lien et écrit dans le nœud source.
+    Plusieurs prompts = un par ligne pour CR Prompt List (champ multiline_text)."""
     inputs = node_inputs(wf, node_id)
-    key = next((k for k in ("text", "prompt", "string", "value") if isinstance(inputs.get(k), str)), None)
-    if key is None:
-        raise ValueError(f"nœud {node_id} : pas d'entrée texte directe (branchée sur un autre nœud ?)")
-    inputs[key] = text
+    key = next((k for k in ("text", "multiline_text", "prompt", "string", "value") if isinstance(inputs.get(k), str)), None)
+    if key is not None:
+        inputs[key] = text
+        return
+    link = next((inputs[k] for k in ("text", "prompt", "string", "value")
+                 if isinstance(inputs.get(k), list) and len(inputs[k]) == 2), None)
+    if link is None or _depth >= 3:
+        raise ValueError(f"nœud {node_id} : aucune entrée texte (directe ou branchée) trouvée")
+    set_text(wf, link[0], text, _depth + 1)
 
 
 def run_workflow(wf):

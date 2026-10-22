@@ -50,7 +50,7 @@
         "strength": 0.5
       },
       "lora_4": {
-        "on": false,
+        "on": true,
         "lora": "snofs_krea_v1_5.safetensors",
         "strength": 0.6
       },
@@ -90,7 +90,7 @@
   },
   "7": {
     "inputs": {
-      "seed": 537559115673143
+      "seed": 1084331127134207
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -136,7 +136,10 @@
   },
   "9": {
     "inputs": {
-      "text": "l4cie, a casual front-camera selfie taken on an iPhone indoors, the phone held close and slightly below her chin so her face and upper chest fill most of the frame with slight wide-angle distortion at the edges. She sits or leans forward, head tilted a little to her left, right hand propped under her chin with the palm supporting her jaw and fingers curled loosely near her cheek. She wears a white ribbed tank top with thin straps and a delicate lace trim along the neckline, a thin gold chain with a small cross pendant resting on her chest. Her long hair falls straight and heavy over both shoulders and down her front, several strands resting against her collarbones and chest. Her eyes look straight into the lens, lids slightly lowered, and her lips are closed in a small smile with the corners gently lifted. Behind her a plain light-grey wall fills the background, a round mirror hangs on the left, a doorway or closet appears on the right, and the edge of a bed or sofa shows at the bottom. Soft indoor daylight comes from the left, leaving gentle shadows under her chin and along the side of her face. The whole close-up stays mostly in focus. Mild digital noise shows in the darker areas near the wall, a couple of flyaway hairs cross the frame, the photo tilts a few degrees to the right, and the bottom edge cuts off just below her chest.",
+      "text": [
+        "23",
+        0
+      ],
       "clip": [
         "5",
         1
@@ -287,6 +290,19 @@
     "class_type": "SaveImageWithFakeEXIF",
     "_meta": {
       "title": "Save Image (Fake EXIF)"
+    }
+  },
+  "23": {
+    "inputs": {
+      "prepend_text": "l4cie,",
+      "multiline_text": "a low-quality casual snapshot taken on an old iPhone from a low side angle in a dim bedroom, the phone held close with wide-angle distortion and grain. She is in doggy style on all fours on the unmade bed, back deeply arched, knees spread, black tank top rolled up so her ass is bare. A tall naked Black man with long cornrow braids that have reddish-brown tips kneels on the bed right behind her, his bare torso and hips fully exposed. His skin presses against hers, hips tight to her ass, an enormous hyper-thick cock sunk deep inside her pussy, the thick shaft stretching her open and wet with fluids, only the base visible. His right hand wearing multiple heavy silver rings grips her hip firmly and pulls her backward. Her long hair hangs forward over her shoulder, eyes half-closed, mouth open with lips parted. Soft side light leaves deep shadows, heavy digital noise fills the darker areas, mild motion blur on her hair, the frame tilts slightly, and the bottom edge cuts off across his upper thighs.",
+      "append_text": "",
+      "start_index": 0,
+      "max_rows": 1000
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
     }
   }
 }

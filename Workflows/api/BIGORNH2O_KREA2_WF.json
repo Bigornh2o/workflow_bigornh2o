@@ -241,10 +241,6 @@
       "options_group.options0": [
         "24",
         0
-      ],
-      "options_group.options1": [
-        "27",
-        0
       ]
     },
     "class_type": "ClownsharkChainsampler_Beta",
@@ -275,14 +271,6 @@
       "latent_image": [
         "18",
         0
-      ],
-      "options_group.options0": [
-        "25",
-        0
-      ],
-      "options_group.options1": [
-        "28",
-        0
       ]
     },
     "class_type": "ClownsharkChainsampler_Beta",
@@ -311,7 +299,7 @@
   "23": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, a casual front-camera selfie taken on an iPhone in a bedroom, the phone held close and a little below her chin so her face and upper chest fill nearly the entire frame with noticeable wide-angle distortion at the edges and a slight tilt to the right. She faces the camera almost straight on, head tilted a few degrees to her right, shoulders relaxed and bare. She wears a simple black top with thin straps and a delicate gold chain with a small cross pendant hanging in the center of her chest. Her long hair falls straight and heavy over both shoulders and down her front, several strands resting against her collarbones and the top of her chest. Her eyes look straight into the front camera lens, eyelids a little lowered, and her lips stay closed in a completely neutral line with the corners neither lifted nor turned down. Behind her a plain light-grey wall fills most of the background, a round black-framed mirror hangs on the left side, a white door frame appears on the right, and the edge of a bed shows at the bottom. Soft indoor daylight comes from the left side of the room, leaving gentle shadows under her chin and along the right side of her face. The whole close-up from her face to the wall stays mostly in sharp focus. Mild digital noise appears in the darker areas near the wall, several flyaway hairs cross the frame near her shoulders, the photo tilts a few degrees to the right, one lower corner is slightly soft, and the bottom edge cuts off unevenly just below her chest.",
+      "multiline_text": "l4cie, a casual smartphone photo taken from the front in a small apartment kitchen on a weekday morning, the phone held at eye level by a friend standing a few steps away so she fills the frame from the hips up, slightly off-center to the left. Her eyes look straight into the camera lens, lips closed in a soft natural smile, corners of the mouth lifted, no tongue visible. She leans lightly with her lower back against the counter, one hand holding a white ceramic mug close to her chest, the other hand resting on the counter edge beside her. She wears an oversized light grey knit sweater with the sleeves pushed up to her forearms and high-waisted black leggings. Her hair is down with a loose middle part, slightly tousled from sleep, a few strands falling across her cheek and shoulder. Behind her, a window above the sink lets in cool white morning light, a bowl of lemons and a half-open bag of coffee beans sit on the counter, and a dish towel hangs from the oven handle. Soft daylight from the window on the left, gentle shadows along her jaw and neck, slightly warm yellow tint from a ceiling light in the background. Mild digital noise in the shadows, a small lens smudge softening the highlights near the window, the frame tilted a couple of degrees to the left, and the left edge of the photo cutting off part of the counter.",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -325,8 +313,8 @@
     "inputs": {
       "s_noise": 1.0,
       "s_noise_substep": 1.0,
-      "noise_anchor_sde": 1.0,
-      "lying": 0.92,
+      "noise_anchor_sde": 0.5,
+      "lying": 0.95,
       "lying_inv": 1.0,
       "lying_start_step": 0,
       "lying_inv_start_step": 1
@@ -334,49 +322,6 @@
     "class_type": "ClownOptions_SigmaScaling_Beta",
     "_meta": {
       "title": "ClownOptions Sigma Scaling"
-    }
-  },
-  "25": {
-    "inputs": {
-      "s_noise": 1.05,
-      "s_noise_substep": 1.0,
-      "noise_anchor_sde": 1.0,
-      "lying": 1.0,
-      "lying_inv": 1.0,
-      "lying_start_step": 0,
-      "lying_inv_start_step": 1
-    },
-    "class_type": "ClownOptions_SigmaScaling_Beta",
-    "_meta": {
-      "title": "ClownOptions Sigma Scaling"
-    }
-  },
-  "27": {
-    "inputs": {
-      "weight": 1.0,
-      "method": "model",
-      "mode": "hard",
-      "eta": 0.5,
-      "start_step": 1,
-      "end_step": 5
-    },
-    "class_type": "ClownOptions_DetailBoost_Beta",
-    "_meta": {
-      "title": "ClownOptions Detail Boost"
-    }
-  },
-  "28": {
-    "inputs": {
-      "weight": 10.0,
-      "method": "model",
-      "mode": "hard",
-      "eta": 0.5,
-      "start_step": 5,
-      "end_step": 10
-    },
-    "class_type": "ClownOptions_DetailBoost_Beta",
-    "_meta": {
-      "title": "ClownOptions Detail Boost"
     }
   }
 }

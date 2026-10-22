@@ -90,7 +90,7 @@
   },
   "7": {
     "inputs": {
-      "seed": 1084331127134207
+      "seed": 418467865735911
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -216,7 +216,7 @@
   },
   "18": {
     "inputs": {
-      "eta": 0.7,
+      "eta": 0.5,
       "sampler_name": "exponential/res_2s",
       "steps_to_run": 4,
       "cfg": 1.0,
@@ -237,6 +237,14 @@
       "latent_image": [
         "8",
         0
+      ],
+      "options_group.options0": [
+        "24",
+        0
+      ],
+      "options_group.options1": [
+        "27",
+        0
       ]
     },
     "class_type": "ClownsharkChainsampler_Beta",
@@ -246,7 +254,7 @@
   },
   "19": {
     "inputs": {
-      "eta": 0.7,
+      "eta": 0.5,
       "sampler_name": "exponential/ddim",
       "steps_to_run": -1,
       "cfg": 1.0,
@@ -266,6 +274,14 @@
       ],
       "latent_image": [
         "18",
+        0
+      ],
+      "options_group.options0": [
+        "25",
+        0
+      ],
+      "options_group.options1": [
+        "28",
         0
       ]
     },
@@ -294,8 +310,8 @@
   },
   "23": {
     "inputs": {
-      "prepend_text": "l4cie,",
-      "multiline_text": "a low-quality casual snapshot taken on an old iPhone from a low side angle in a dim bedroom, the phone held close with wide-angle distortion and grain. She is in doggy style on all fours on the unmade bed, back deeply arched, knees spread, black tank top rolled up so her ass is bare. A tall naked Black man with long cornrow braids that have reddish-brown tips kneels on the bed right behind her, his bare torso and hips fully exposed. His skin presses against hers, hips tight to her ass, an enormous hyper-thick cock sunk deep inside her pussy, the thick shaft stretching her open and wet with fluids, only the base visible. His right hand wearing multiple heavy silver rings grips her hip firmly and pulls her backward. Her long hair hangs forward over her shoulder, eyes half-closed, mouth open with lips parted. Soft side light leaves deep shadows, heavy digital noise fills the darker areas, mild motion blur on her hair, the frame tilts slightly, and the bottom edge cuts off across his upper thighs.",
+      "prepend_text": "",
+      "multiline_text": "l4cie, a casual front-camera selfie taken on an iPhone in a bedroom, the phone held close and a little below her chin so her face and upper chest fill nearly the entire frame with noticeable wide-angle distortion at the edges and a slight tilt to the right. She faces the camera almost straight on, head tilted a few degrees to her right, shoulders relaxed and bare. She wears a simple black top with thin straps and a delicate gold chain with a small cross pendant hanging in the center of her chest. Her long hair falls straight and heavy over both shoulders and down her front, several strands resting against her collarbones and the top of her chest. Her eyes look straight into the front camera lens, eyelids a little lowered, and her lips stay closed in a completely neutral line with the corners neither lifted nor turned down. Behind her a plain light-grey wall fills most of the background, a round black-framed mirror hangs on the left side, a white door frame appears on the right, and the edge of a bed shows at the bottom. Soft indoor daylight comes from the left side of the room, leaving gentle shadows under her chin and along the right side of her face. The whole close-up from her face to the wall stays mostly in sharp focus. Mild digital noise appears in the darker areas near the wall, several flyaway hairs cross the frame near her shoulders, the photo tilts a few degrees to the right, one lower corner is slightly soft, and the bottom edge cuts off unevenly just below her chest.",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -303,6 +319,64 @@
     "class_type": "CR Prompt List",
     "_meta": {
       "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "24": {
+    "inputs": {
+      "s_noise": 1.0,
+      "s_noise_substep": 1.0,
+      "noise_anchor_sde": 1.0,
+      "lying": 0.92,
+      "lying_inv": 1.0,
+      "lying_start_step": 0,
+      "lying_inv_start_step": 1
+    },
+    "class_type": "ClownOptions_SigmaScaling_Beta",
+    "_meta": {
+      "title": "ClownOptions Sigma Scaling"
+    }
+  },
+  "25": {
+    "inputs": {
+      "s_noise": 1.05,
+      "s_noise_substep": 1.0,
+      "noise_anchor_sde": 1.0,
+      "lying": 1.0,
+      "lying_inv": 1.0,
+      "lying_start_step": 0,
+      "lying_inv_start_step": 1
+    },
+    "class_type": "ClownOptions_SigmaScaling_Beta",
+    "_meta": {
+      "title": "ClownOptions Sigma Scaling"
+    }
+  },
+  "27": {
+    "inputs": {
+      "weight": 1.0,
+      "method": "model",
+      "mode": "hard",
+      "eta": 0.5,
+      "start_step": 1,
+      "end_step": 5
+    },
+    "class_type": "ClownOptions_DetailBoost_Beta",
+    "_meta": {
+      "title": "ClownOptions Detail Boost"
+    }
+  },
+  "28": {
+    "inputs": {
+      "weight": 10.0,
+      "method": "model",
+      "mode": "hard",
+      "eta": 0.5,
+      "start_step": 5,
+      "end_step": 10
+    },
+    "class_type": "ClownOptions_DetailBoost_Beta",
+    "_meta": {
+      "title": "ClownOptions Detail Boost"
     }
   }
 }

@@ -218,12 +218,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_kbfml_00003_.png&type=temp&subfolder=&rand=0.22202168970247915"
+            "url": "/api/view?filename=rgthree.compare._temp_ympbb_00019_.png&type=temp&subfolder=&rand=0.09022480888765061"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_kbfml_00004_.png&type=temp&subfolder=&rand=0.2054144502272417"
+            "url": "/api/view?filename=rgthree.compare._temp_ympbb_00020_.png&type=temp&subfolder=&rand=0.2224788028714293"
           }
         ]
       },
@@ -467,7 +467,7 @@
     },
     "class_type": "SaveImageWithFakeEXIF",
     "_meta": {
-      "title": "Save Image (Fake EXIF)",
+      "title": "API_SAVE",
       "aux_id": "Bigornh2o/ComfyUI-FakeEXIF",
       "ver": "b343f0ac6163265696b93d7efe39c1750087abb2"
     }
@@ -478,7 +478,7 @@
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
-      "title": "Seed (rgthree)",
+      "title": "API_SEED",
       "cnr_id": "rgthree-comfy",
       "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
     }
@@ -503,7 +503,7 @@
       "sampler_mode": "resample",
       "bongmath": true,
       "model": [
-        "21",
+        "46",
         0
       ],
       "positive": [
@@ -532,7 +532,7 @@
   },
   "56": {
     "inputs": {
-      "s_noise": 1.05,
+      "s_noise": 0.99,
       "s_noise_substep": 1.0,
       "noise_anchor_sde": 1.0,
       "lying": 0.95,
@@ -550,14 +550,14 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, a low-angle amateur smartphone snap taken from below while she stands outdoors under a clear blue sky, the frame tilted and handheld close. She looks down toward the camera with a neutral expression, eyes open and direct, lids slightly lowered, lips closed with the corners relaxed, brows in a neutral position. She wears a tight grey ribbed crop top with thin straps, the fabric clinging so her full breasts sit heavy and natural under gravity with soft weight, the lower curves rounded and full, the upper curves and cleavage visible above the neckline. She holds a black jacket open with both hands at the sides. Her hair falls loose and windblown over her shoulders and to one side. Bright daylight from above creates clear highlights on her skin and soft shadows under her chin and breasts. Power lines and the edge of a building are visible against the sky in the background. Mild digital noise in the darker areas of the jacket, slight wide-angle distortion from the phone held low, and the frame cuts across her waist. The whole shot has the imperfect, intimate feel of a quick phone photo taken from below.",
+      "multiline_text": "l4cie, an adult woman in her mid-twenties, from the foot of the bed at hip level. She straddles an adult man in his early thirties, with short black hair, dark eyes, a strong square jaw, an extremely tall and heavily muscular build, deep brown skin, a small scar on his right shoulder, wearing nothing, his mouth slightly open, who lies on his back, framed from head to mid-thigh, her knees on either side of his hips, her hands planted on his chest. She is completely naked, her hips rising and falling in a steady up-and-down motion, his long thick erect penis fully inside her vagina with the shaft clearly visible between her thighs at the point of penetration on each downward thrust. Her full heavy breasts hang low, their weight pulling them down and forward so the undersides are full and soft, bouncing and lagging a beat behind her hips with every thrust, nipples hard and swinging. Her hair is loose and messy, lips parted, eyes half closed. His hands grip her hips. The sheets are twisted, a lamp on the nightstand, clothes on the floor. The lamp is the only light, a warm pool on their bodies, the rest of the room dark. A sheen of sweat on her chest, visible pores, mild noise, the frame tilts.",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
     },
     "class_type": "CR Prompt List",
     "_meta": {
-      "title": "\ud83d\udcdc CR Prompt List",
+      "title": "API_PROMPT",
       "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
       "aux_id": "Suzie1/ComfyUI_Comfyroll_CustomNodes",
       "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca"

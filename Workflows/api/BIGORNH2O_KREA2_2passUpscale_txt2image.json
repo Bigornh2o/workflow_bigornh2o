@@ -31,20 +31,6 @@
       "ver": "0.25.0"
     }
   },
-  "5": {
-    "inputs": {
-      "conditioning": [
-        "11",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Conditioning Zero Out",
-      "cnr_id": "comfy-core",
-      "ver": "0.25.0"
-    }
-  },
   "7": {
     "inputs": {
       "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
@@ -154,7 +140,7 @@
       "sage_attention": "auto",
       "allow_compile": false,
       "model": [
-        "46",
+        "69",
         0
       ]
     },
@@ -163,20 +149,6 @@
       "title": "Patch Sage Attention KJ",
       "cnr_id": "comfyui-kjnodes",
       "ver": "f3835b7511375c13bf2fdee3377597f0ff9e8e77"
-    }
-  },
-  "22": {
-    "inputs": {
-      "images": [
-        "20",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image",
-      "cnr_id": "comfy-core",
-      "ver": "0.25.0"
     }
   },
   "23": {
@@ -218,12 +190,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ympbb_00019_.png&type=temp&subfolder=&rand=0.09022480888765061"
+            "url": "/api/view?filename=rgthree.compare._temp_caybf_00003_.png&type=temp&subfolder=&rand=0.03547969865623579"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ympbb_00020_.png&type=temp&subfolder=&rand=0.2224788028714293"
+            "url": "/api/view?filename=rgthree.compare._temp_caybf_00004_.png&type=temp&subfolder=&rand=0.3678107484005031"
           }
         ]
       },
@@ -232,7 +204,7 @@
         0
       ],
       "image_b": [
-        "22",
+        "20",
         0
       ]
     },
@@ -356,7 +328,7 @@
         0
       ],
       "negative": [
-        "5",
+        "66",
         0
       ],
       "latent_image": [
@@ -379,7 +351,7 @@
       "scheduler": "beta57",
       "steps": 8,
       "steps_to_run": 4,
-      "denoise": 0.27,
+      "denoise": 0.22,
       "cfg": 1.0,
       "seed": [
         "54",
@@ -503,7 +475,7 @@
       "sampler_mode": "resample",
       "bongmath": true,
       "model": [
-        "46",
+        "21",
         0
       ],
       "positive": [
@@ -550,7 +522,7 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, an adult woman in her mid-twenties, from the foot of the bed at hip level. She straddles an adult man in his early thirties, with short black hair, dark eyes, a strong square jaw, an extremely tall and heavily muscular build, deep brown skin, a small scar on his right shoulder, wearing nothing, his mouth slightly open, who lies on his back, framed from head to mid-thigh, her knees on either side of his hips, her hands planted on his chest. She is completely naked, her hips rising and falling in a steady up-and-down motion, his long thick erect penis fully inside her vagina with the shaft clearly visible between her thighs at the point of penetration on each downward thrust. Her full heavy breasts hang low, their weight pulling them down and forward so the undersides are full and soft, bouncing and lagging a beat behind her hips with every thrust, nipples hard and swinging. Her hair is loose and messy, lips parted, eyes half closed. His hands grip her hips. The sheets are twisted, a lamp on the nightstand, clothes on the floor. The lamp is the only light, a warm pool on their bodies, the rest of the room dark. A sheen of sweat on her chest, visible pores, mild noise, the frame tilts.",
+      "multiline_text": "l4cie, a woman sits on a beige cushioned wicker lounge chair outdoors with dense green leafy bushes behind her, wearing a black ribbed one-piece swimsuit with a deep V-neckline and side cutouts at the waist, her body angled slightly forward with both hands resting on the cushion on either side of her hips, her head tilted gently toward the camera with a calm neutral expression and lips slightly parted, sunlight falling from the upper left casting soft shadows across her chest and thighs, the ribbed fabric clings to her torso with visible tension across the bust and their weight pulls them down against the swimsuit, slight wide-angle perspective from a handheld smartphone at chest height, natural depth of field with the background foliage softly out of focus, skin texture visible with pores and faint freckles across her nose and shoulders, a faint smudge on the phone lens creates a soft blur in the lower right corner. \u7ec6\u817b \u6c1b\u56f4\u611f",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -561,6 +533,37 @@
       "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
       "aux_id": "Suzie1/ComfyUI_Comfyroll_CustomNodes",
       "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca"
+    }
+  },
+  "66": {
+    "inputs": {
+      "text": "  \u6a21\u7cca \u4e11\u964b \u7cdf\u7cd5  ,blurry ugly bad  ,\u7ed8\u753b\uff0c\u52a8\u6f2b\u7ed8\u753b\uff0c\u827a\u672f \u52a8\u6f2b\u98ce, \u4e8c\u6b21\u5143, \u6f2b\u753b\u98ce, \u63d2\u753b\u98ce, \u5361\u901a\u98ce, Q\u7248, \u624b\u7ed8\u98ce, \u6c34\u5f69\u753b, \u7d20\u63cf\u98ce, \u7ebf\u7a3f, \u8349\u56fe, \u5199\u5b9e\u6cb9\u753b, \u6cb9\u753b\u98ce, \u7248\u753b\u98ce, \u50cf\u7d20\u753b, pixel art, \u70b9\u9635\u753b, low poly, voxel, blueprint, \u7ebf\u6846\u56fe, 3D\u6e32\u67d3, 3D\u6a21\u578b, CG\u6e32\u67d3, CG\u98ce\u683c, \u6e38\u620f\u6a21\u578b, \u6e38\u620f\u89d2\u8272, \u865a\u62df\u5f62\u8c61, vtuber\u98ce, VTuber\u98ce, cyberpunk, \u8d5b\u535a\u670b\u514b\u98ce, vaporwave, synthwave, glitch art, \u8d5b\u535a\u98ce, \u9713\u8679\u8d5b\u535a\u670b\u514b\u98ce, \u4f4e\u6e05\u6670\u5ea6, \u4f4e\u5206\u8fa8\u7387, \u6a21\u7cca, \u865a\u7126, \u5bf9\u7126\u5931\u8d25, \u5931\u7126, \u5931\u771f, \u566a\u70b9\u4e25\u91cd, \u8fc7\u5ea6\u566a\u70b9, JPEG\u4f2a\u5f71, \u538b\u7f29\u4f2a\u5f71, \u8fc7\u5ea6\u538b\u7f29, \u62c9\u4e1d\u4f2a\u5f71, \u8272\u5f69\u6ea2\u51fa, \u989c\u8272\u65ad\u5c42, \u504f\u8272\u4e25\u91cd, \u8fc7\u5ea6\u9510\u5316, \u8fc7\u5ea6\u964d\u566a, \u8fc7\u5ea6HDR, HDR\u98ce, \u5149\u6655, \u7206\u8fb9, \u8fc7\u66dd\u9ad8\u5149, \u6b7b\u9ed1\u9634\u5f71, \u8f6e\u5ed3\u53d1\u5149, \u8fb9\u7f18\u53d1\u5149, \u952f\u9f7f, \u7c97\u7cd9\u7ec6\u8282, \u5149\u5f71\u4e0d\u771f\u5b9e, \u4e0d\u771f\u5b9e\u53cd\u5c04, \u4e0d\u771f\u5b9e\u5149\u5f71, \u7f51\u7ea2\u9ed8\u8ba4\u4eba\u8138\u6a21\u677f, \u9ed8\u8ba4\u98ce\u683c\u4eba\u8138, \u5343\u4eba\u4e00\u9762, \u5343\u7bc7\u4e00\u5f8b\u7684\u8138, \u540c\u4e00\u5f20\u8138, \u7edf\u4e00\u8138\u578b, \u7edf\u4e00\u4e94\u5b98, \u6807\u51c6\u5316\u8138, \u5b8c\u7f8e\u5bf9\u79f0\u8138, \u5b8c\u7f8e\u65e0\u7455\u7684\u8138, \u786c\u51f9\u7cbe\u81f4\u8138, \u5047\u7cbe\u81f4\u8138, \u7edf\u4e00\u74dc\u5b50\u8138, \u7edf\u4e00\u5c16\u4e0b\u5df4, \u7edf\u4e00\u9ad8\u9f3b\u6881, \u7edf\u4e00\u53cc\u773c\u76ae, \u7edf\u4e00\u5973\u795e\u8138, \u795e\u4ed9\u989c\u503c\u6a21\u677f, \u7f8e\u989c\u6ee4\u955c, \u8fc7\u5ea6\u78e8\u76ae, \u78e8\u76ae\u8fc7\u5ea6, \u78e8\u76ae\u6ee4\u955c, \u78e8\u76ae\u76ae\u80a4, \u73bb\u7483\u76ae, \u73bb\u7483\u76ae\u80a4, \u74f7\u5a03\u5a03\u76ae\u80a4, \u201c\u5b8c\u7f8e\u76ae\u80a4\u201d, \u8fc7\u5ea6\u7f8e\u767d, \u5931\u771f\u76ae\u80a4, \u4e0d\u771f\u5b9e\u76ae\u80a4\u7eb9\u7406, \u865a\u5047\u76ae\u80a4\u7eb9\u7406, \u5851\u6599\u8d28\u611f\u76ae\u80a4, \u8721\u50cf\u8138, \u5047\u8138, \u5047\u76ae\u80a4, \u8fc7\u5ea6\u4fee\u56fe, \u8fc7\u5ea6\u6db2\u5316, \u6db2\u5316\u53d8\u5f62, \u4fee\u56fe\u75d5\u8ff9, \u8fc7\u5ea6\u7626\u8138, \u8fc7\u5ea6\u5c16\u8138, \u4e0d\u771f\u5b9e\u4e94\u5b98\u6bd4\u4f8b, \u4e0d\u771f\u5b9e\u5934\u8eab\u6bd4, PS\u75d5\u8ff9\u660e\u663e, \u8fc7\u5ea6\u6ee4\u955c, \u5f71\u697c\u98ce, \u5199\u771f\u68da\u98ce, \u5199\u771f\u68da\u6253\u5149, \u5f71\u697c\u7cbe\u4fee, \u201c\u7cbe\u4fee\u5927\u7247\u201d, \u68da\u62cd\u5927\u7247, \u68da\u62cd\u5927\u7247\u98ce, \u6742\u5fd7\u5c01\u9762\u98ce, \u65f6\u5c1a\u6742\u5fd7\u68da\u62cd\u98ce, glamour, idol poster, idol promo, KOL\u5934\u50cf, KOL\u98ce, \u4e3b\u64ad\u8138, \u76f4\u64ad\u8138, \u76f4\u64ad\u95f4\u6ee4\u955c, \u5e7f\u544a\u786c\u7167, \u5f3a\u70c8\u5546\u4e1a\u5e7f\u544a\u611f, \u5546\u4e1a\u56fe\u5e93\u6a21\u677f\u98ce, \u8fc7\u5ea6\u65f6\u5c1a\u5927\u7247\u611f, \u5938\u5f20\u68da\u62cd\u611f, \u8fc7\u5ea6\u9ad8\u7ea7\u611f, \u7edf\u4e00\u6d77\u62a5\u98ce, \u901a\u7528\u5e7f\u544a\u6a21\u7279\u611f, \u81ea\u62cd\u6746\u89c6\u89d2, \u624b\u673a\u524d\u7f6e\u6444\u50cf\u5934, \u8fc7\u8fd1\u5e7f\u89d2\u7578\u53d8, \u5927\u5934\u7578\u53d8, \u9c7c\u773c\u7578\u53d8, \u8d85\u5e7f\u89d2\u7578\u53d8, \u76f4\u64ad\u6ee4\u955c, \u81ea\u62cd\u6ee4\u955c, \u81ea\u62cd\u7f8e\u989c, \u6296\u97f3\u6ee4\u955c, \u5feb\u624b\u6ee4\u955c, \u7edf\u4e00\u7f51\u7ea2\u81ea\u62cd\u6a21\u677f, stock photo, \u5e93\u5b58\u7167\u7247\u611f, \u5178\u578bstock photo, \u901a\u7528\u56fe\u5e93\u6a21\u7279, \u5546\u4e1a\u56fe\u5e93\u98ce, \u5343\u7bc7\u4e00\u5f8b\u56fe\u5e93\u6a21\u7279, \u50f5\u786c\u59ff\u52bf, \u50f5\u786c\u8868\u60c5, \u5851\u6599\u7b11\u5bb9, \u5047\u7b11, \u865a\u5047\u7684\u8868\u60c5, \u50f5\u5c38\u8138, \u50f5\u786c\u7684\u773c\u795e, \u8fc7\u5ea6\u6446\u62cd\u59ff\u52bf, \u7edf\u4e00\u59ff\u52bf, \u91cd\u590d\u59ff\u52bf, \u7edf\u4e00\u6784\u56fe, \u5e7f\u544a\u6a21\u677f, \u901a\u7528\u6d77\u62a5\u80cc\u666f, \u901a\u7528\u5e7f\u544a\u80cc\u666f, template background, AI\u611f\u5f88\u5f3a, \u4e00\u773c\u770b\u51fa\u662fAI\u56fe, \u4eba\u5de5\u75d5\u8ff9, \u4e0d\u81ea\u7136, \u865a\u5047\u80cc\u666f, \u5047\u666f\u6df1, \u8fc7\u5ea6\u666f\u6df1\u865a\u5316, \u80cc\u666f\u4e71\u7cdf\u7cdf, \u4f4e\u8d28\u91cf, \u4f4e\u7ec6\u8282, \u8349\u7387\u7ec6\u8282, \u4e0d\u771f\u5b9e, \u975e\u7167\u7247, \u975e\u6444\u5f71, \u975e\u81ea\u7136\u5149, \u5047\u5149\u6e90, \u4e0d\u81ea\u7136\u9ad8\u5149, \u8fc7\u5ea6\u9510\u5316\u7ebf\u6761, \u8f6e\u5ed3\u8fc7\u786c, \u8fb9\u7f18\u8fc7\u786c, \u8f6e\u5ed3\u4e0d\u5e72\u51c0, \u566a\u70b9\u5757\u72b6\u611f, \u6a21\u62df\u98ce\u683c\u800c\u4e0d\u662f\u5b9e\u9645\u7167\u7247\n",
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.42.0"
+    }
+  },
+  "69": {
+    "inputs": {
+      "lora_name": "l4cie_Lora_000002000.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LOAD CHARACTER LORA",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.0"
     }
   }
 }

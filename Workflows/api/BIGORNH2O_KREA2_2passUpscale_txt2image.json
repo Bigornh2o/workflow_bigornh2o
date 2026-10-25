@@ -1,0 +1,566 @@
+{
+  "1": {
+    "inputs": {
+      "samples": [
+        "48",
+        1
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "4": {
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "5": {
+    "inputs": {
+      "conditioning": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "7": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "8": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "9": {
+    "inputs": {
+      "unet_name": "krea2_turbo_nvfp4.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Turbo Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": [
+        "40",
+        0
+      ],
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "16": {
+    "inputs": {
+      "conditioning": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": [
+        "40",
+        0
+      ],
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "20": {
+    "inputs": {
+      "samples": [
+        "55",
+        1
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "21": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ",
+      "cnr_id": "comfyui-kjnodes",
+      "ver": "f3835b7511375c13bf2fdee3377597f0ff9e8e77"
+    }
+  },
+  "22": {
+    "inputs": {
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "23": {
+    "inputs": {
+      "pixels": [
+        "33",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "27": {
+    "inputs": {
+      "value": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text (Multiline)",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "32": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_kbfml_00003_.png&type=temp&subfolder=&rand=0.22202168970247915"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_kbfml_00004_.png&type=temp&subfolder=&rand=0.2054144502272417"
+          }
+        ]
+      },
+      "image_a": [
+        "4",
+        0
+      ],
+      "image_b": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "33": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "scale_by": 1.5,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "40": {
+    "inputs": {
+      "any_01": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "45": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "RealisticSnapshotKrea2_v1.0.safetensors",
+        "strength": 1.2
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "WeightSlider-KREA2_v2.safetensors",
+        "strength": 0.25
+      },
+      "lora_3": {
+        "on": true,
+        "lora": "realism_engine_krea2_v3.1.safetensors",
+        "strength": 0.5
+      },
+      "lora_4": {
+        "on": true,
+        "lora": "snofs_krea_v1_5.safetensors",
+        "strength": 0.6
+      },
+      "lora_5": {
+        "on": false,
+        "lora": "krea2_turbo_lora_rank_64_bf16.safetensors",
+        "strength": 0.6
+      },
+      "\u2795 Add Lora": "",
+      "model": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "46": {
+    "inputs": {
+      "lora_name": "l4cie_Lora_000002000.safetensors",
+      "strength_model": 1.3,
+      "model": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LOAD CHARACTER LORA",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.0"
+    }
+  },
+  "48": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "multistep/res_2m",
+      "scheduler": "beta57",
+      "steps": 15,
+      "steps_to_run": 12,
+      "denoise": 1.0,
+      "cfg": 1.0,
+      "seed": [
+        "53",
+        0
+      ],
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "51",
+        3
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler",
+      "cnr_id": "RES4LYF",
+      "aux_id": "ClownsharkBatwing/RES4LYF",
+      "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
+    }
+  },
+  "49": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "exponential/ddim",
+      "scheduler": "beta57",
+      "steps": 8,
+      "steps_to_run": 4,
+      "denoise": 0.27,
+      "cfg": 1.0,
+      "seed": [
+        "54",
+        0
+      ],
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "21",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler",
+      "cnr_id": "RES4LYF",
+      "aux_id": "ClownsharkBatwing/RES4LYF",
+      "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
+    }
+  },
+  "50": {
+    "inputs": {
+      "megapixel": "2.4",
+      "aspect_ratio": "9:16 (Slim Vertical)",
+      "divisible_by": 8,
+      "max_long_side": 2048,
+      "smart_cap_enable": true
+    },
+    "class_type": "SmartFluxResolution",
+    "_meta": {
+      "title": "Smart Flux Resolution",
+      "aux_id": "Bigornh2o/ComfyUI-Bigornh2oSmartResolution",
+      "ver": "e351a6c8a025e6a16ba5b03d173b49d84564ccef"
+    }
+  },
+  "51": {
+    "inputs": {
+      "resize_to_input": "false",
+      "width": [
+        "50",
+        0
+      ],
+      "height": [
+        "50",
+        1
+      ],
+      "mask_channel": "red",
+      "invert_mask": false,
+      "latent_type": "16_channels",
+      "interpolation": "lanczos",
+      "method": "fill / crop"
+    },
+    "class_type": "VAEEncodeAdvanced",
+    "_meta": {
+      "title": "VAEEncodeAdvanced",
+      "cnr_id": "RES4LYF",
+      "aux_id": "ClownsharkBatwing/RES4LYF",
+      "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
+    }
+  },
+  "52": {
+    "inputs": {
+      "filename_prefix": "IMG",
+      "format": "png",
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16 Pro Max",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "SaveImageWithFakeEXIF",
+    "_meta": {
+      "title": "Save Image (Fake EXIF)",
+      "aux_id": "Bigornh2o/ComfyUI-FakeEXIF",
+      "ver": "b343f0ac6163265696b93d7efe39c1750087abb2"
+    }
+  },
+  "53": {
+    "inputs": {
+      "seed": 760747164919274
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "54": {
+    "inputs": {
+      "seed": 998131956473251
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "55": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "exponential/ddim",
+      "steps_to_run": -1,
+      "cfg": 1.0,
+      "sampler_mode": "resample",
+      "bongmath": true,
+      "model": [
+        "21",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "49",
+        0
+      ],
+      "options_group.options0": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "ClownsharkChainsampler_Beta",
+    "_meta": {
+      "title": "ClownsharkChainsampler",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
+    }
+  },
+  "56": {
+    "inputs": {
+      "s_noise": 1.05,
+      "s_noise_substep": 1.0,
+      "noise_anchor_sde": 1.0,
+      "lying": 0.95,
+      "lying_inv": 1.0,
+      "lying_start_step": 0,
+      "lying_inv_start_step": 1
+    },
+    "class_type": "ClownOptions_SigmaScaling_Beta",
+    "_meta": {
+      "title": "ClownOptions Sigma Scaling",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
+    }
+  },
+  "57": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": "l4cie, a low-angle amateur smartphone snap taken from below while she stands outdoors under a clear blue sky, the frame tilted and handheld close. She looks down toward the camera with a neutral expression, eyes open and direct, lids slightly lowered, lips closed with the corners relaxed, brows in a neutral position. She wears a tight grey ribbed crop top with thin straps, the fabric clinging so her full breasts sit heavy and natural under gravity with soft weight, the lower curves rounded and full, the upper curves and cleavage visible above the neckline. She holds a black jacket open with both hands at the sides. Her hair falls loose and windblown over her shoulders and to one side. Bright daylight from above creates clear highlights on her skin and soft shadows under her chin and breasts. Power lines and the edge of a building are visible against the sky in the background. Mild digital noise in the darker areas of the jacket, slight wide-angle distortion from the phone held low, and the frame cuts across her waist. The whole shot has the imperfect, intimate feel of a quick phone photo taken from below.",
+      "append_text": "",
+      "start_index": 0,
+      "max_rows": 1000
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List",
+      "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+      "aux_id": "Suzie1/ComfyUI_Comfyroll_CustomNodes",
+      "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca"
+    }
+  }
+}

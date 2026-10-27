@@ -67,6 +67,22 @@
       "ver": "0.25.0"
     }
   },
+  "10": {
+    "inputs": {
+      "sage_attention": "auto",
+      "allow_compile": false,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ",
+      "cnr_id": "comfyui-kjnodes",
+      "ver": "f3835b7511375c13bf2fdee3377597f0ff9e8e77"
+    }
+  },
   "11": {
     "inputs": {
       "text": [
@@ -190,12 +206,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_caybf_00003_.png&type=temp&subfolder=&rand=0.03547969865623579"
+            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00067_.png&type=temp&subfolder=&rand=0.540259299760477"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_caybf_00004_.png&type=temp&subfolder=&rand=0.3678107484005031"
+            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00068_.png&type=temp&subfolder=&rand=0.478323437919033"
           }
         ]
       },
@@ -309,10 +325,10 @@
       "eta": 0.5,
       "sampler_name": "multistep/res_2m",
       "scheduler": "beta57",
-      "steps": 15,
-      "steps_to_run": 12,
+      "steps": 12,
+      "steps_to_run": 10,
       "denoise": 1.0,
-      "cfg": 1.0,
+      "cfg": 1.3,
       "seed": [
         "53",
         0
@@ -320,7 +336,7 @@
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [
-        "46",
+        "10",
         0
       ],
       "positive": [
@@ -349,8 +365,8 @@
       "eta": 0.5,
       "sampler_name": "exponential/ddim",
       "scheduler": "beta57",
-      "steps": 8,
-      "steps_to_run": 4,
+      "steps": 6,
+      "steps_to_run": 3,
       "denoise": 0.22,
       "cfg": 1.0,
       "seed": [
@@ -378,7 +394,7 @@
     },
     "class_type": "ClownsharKSampler_Beta",
     "_meta": {
-      "title": "ClownsharKSampler",
+      "title": "\u26a1ClownsharKSampler\u26a1",
       "cnr_id": "RES4LYF",
       "aux_id": "ClownsharkBatwing/RES4LYF",
       "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
@@ -446,7 +462,7 @@
   },
   "53": {
     "inputs": {
-      "seed": 760747164919274
+      "seed": 736116117342416
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -504,7 +520,7 @@
   },
   "56": {
     "inputs": {
-      "s_noise": 0.99,
+      "s_noise": 1.0,
       "s_noise_substep": 1.0,
       "noise_anchor_sde": 1.0,
       "lying": 0.95,
@@ -522,7 +538,7 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, a woman sits on a beige cushioned wicker lounge chair outdoors with dense green leafy bushes behind her, wearing a black ribbed one-piece swimsuit with a deep V-neckline and side cutouts at the waist, her body angled slightly forward with both hands resting on the cushion on either side of her hips, her head tilted gently toward the camera with a calm neutral expression and lips slightly parted, sunlight falling from the upper left casting soft shadows across her chest and thighs, the ribbed fabric clings to her torso with visible tension across the bust and their weight pulls them down against the swimsuit, slight wide-angle perspective from a handheld smartphone at chest height, natural depth of field with the background foliage softly out of focus, skin texture visible with pores and faint freckles across her nose and shoulders, a faint smudge on the phone lens creates a soft blur in the lower right corner. \u7ec6\u817b \u6c1b\u56f4\u611f",
+      "multiline_text": "l4cie, a woman straddles a man in cowgirl position inside a camper with curved fabric walls and red trim along the ceiling, her bare breasts hanging heavy under their own weight and settling toward her armpits as she shifts forward, nipples visible against her flushed skin, sweat beading on her stomach and thighs and running in thin lines down her torso, her head tilted down with eyes closed and mouth open, one hand braced on white rumpled bedding beside her hip, her thighs spread wide around his hips, her back arching slightly as she moves up and down, the man's enormous wide cock visible in her pussy as she rides him, his testicles resting against the sheets beneath them, her labia parted around his shaft and her clitoris visible above, natural daylight pouring through the oval window behind her and illuminating dust in the air, handheld smartphone capture with slight tilt and soft focus at the frame edges, skin texture showing pores and small imperfections on her shoulders and chest, unmarked skin, candid amateur framing cropped at the knees and shoulders, slight motion blur on her moving hips, a faint lens smudge near the bottom edge. \u7ec6\u817b \u6c1b\u56f4\u611f",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -564,6 +580,26 @@
       "title": "LOAD CHARACTER LORA",
       "cnr_id": "comfy-core",
       "ver": "0.39.0"
+    }
+  },
+  "78": {
+    "inputs": {
+      "upscale": -1,
+      "tile": false,
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 64,
+      "samples": [
+        "48",
+        1
+      ]
+    },
+    "class_type": "VAEUtils_VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (VAE Utils)",
+      "aux_id": "spacepxl/ComfyUI-VAE-Utils",
+      "ver": "4c62ea005897fafbc593d69bedb8308ec9f932fd"
     }
   }
 }

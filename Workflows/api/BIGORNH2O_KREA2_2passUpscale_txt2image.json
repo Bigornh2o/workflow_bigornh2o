@@ -206,12 +206,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00067_.png&type=temp&subfolder=&rand=0.540259299760477"
+            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00071_.png&type=temp&subfolder=&rand=0.1742391128737053"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00068_.png&type=temp&subfolder=&rand=0.478323437919033"
+            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00072_.png&type=temp&subfolder=&rand=0.6110269949817545"
           }
         ]
       },
@@ -340,7 +340,7 @@
         0
       ],
       "positive": [
-        "11",
+        "74",
         0
       ],
       "negative": [
@@ -394,7 +394,7 @@
     },
     "class_type": "ClownsharKSampler_Beta",
     "_meta": {
-      "title": "\u26a1ClownsharKSampler\u26a1",
+      "title": "ClownsharKSampler",
       "cnr_id": "RES4LYF",
       "aux_id": "ClownsharkBatwing/RES4LYF",
       "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
@@ -580,6 +580,24 @@
       "title": "LOAD CHARACTER LORA",
       "cnr_id": "comfy-core",
       "ver": "0.39.0"
+    }
+  },
+  "74": {
+    "inputs": {
+      "preset": "balanced",
+      "per_layer_weights": "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
+      "multiplier": 1.0,
+      "renormalize": true,
+      "conditioning": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ConditioningKrea2Rebalance",
+    "_meta": {
+      "title": "\ud83c\udf9b\ufe0f Krea 2 Conditioning Control",
+      "aux_id": "huwhitememes/comfyui-krea2-conditioning",
+      "ver": "729cda4fade982988a375b01928f515458407a5c"
     }
   },
   "78": {

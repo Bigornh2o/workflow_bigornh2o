@@ -206,12 +206,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_vjrvf_00005_.png&type=temp&subfolder=&rand=0.471355300983173"
+            "url": "/api/view?filename=rgthree.compare._temp_vjrvf_00011_.png&type=temp&subfolder=&rand=0.8068567583933659"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_vjrvf_00006_.png&type=temp&subfolder=&rand=0.3056378683665286"
+            "url": "/api/view?filename=rgthree.compare._temp_vjrvf_00012_.png&type=temp&subfolder=&rand=0.7880672092490147"
           }
         ]
       },
@@ -403,7 +403,7 @@
   "50": {
     "inputs": {
       "megapixel": "2.4",
-      "aspect_ratio": "16:9 (Panorama)",
+      "aspect_ratio": "9:16 (Slim Vertical)",
       "divisible_by": 8,
       "max_long_side": 2048,
       "smart_cap_enable": true
@@ -462,7 +462,7 @@
   },
   "53": {
     "inputs": {
-      "seed": 736116117342416
+      "seed": 1106941193818240
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -509,6 +509,10 @@
       "options_group.options0": [
         "56",
         0
+      ],
+      "options_group.options1": [
+        "75",
+        0
       ]
     },
     "class_type": "ClownsharkChainsampler_Beta",
@@ -538,7 +542,7 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, a candid rear-camera shot from a few feet behind her at waist height in a vertical frame. A woman sits facing away on a man's lap in a black gaming chair, back slightly arched, hips pushed back toward the camera, ass spread by his hands. Both of her arms are wrapped around the man's neck, hands resting behind his head, torso leaning into him. Her head is turned slightly to the left of the frame, eyes half-closed, brows furrowed, mouth open with lips parted in a tense expression as she cums, body slightly tensed. She is fully nude, full natural breasts visible from the side with soft gravity and natural weight, waist narrow, hips wide, skin with a light sheen. A man sits in the chair, body fully visible: broad shoulders, defined chest and stomach, strong arms, thick thighs, one hand gripping her left ass cheek, the other gripping her right. His head is tilted back slightly against her arms, eyes half-closed. An enormous, heavy, thick penis is deep inside her from below, massive shaft long and weighty, clearly stretching her, hanging with real presence and girth between their bodies. The room is dark with blue and purple LED lights from a desk setup, a keyboard glowing in the foreground, posters on the wall, and a warm light from an open doorway in the background. Slightly tilted horizon, visible phone sensor grain in the shadows, off-center framing with part of the chair cut at the frame edge, and mild motion blur on his hands.",
+      "multiline_text": "l4cie, a rear-camera mirror selfie in a vertical phone frame with light JPEG compression artifacts, the phone held at head height in the reflection, the view straight-on and slightly from below. A woman stands in three-quarter view, her body turned toward the left of the frame, her chest and shoulders angled back toward the mirror. Her lower back has a slight arch and her hips are pushed back. Her head turns slightly toward the phone and tilts a little toward the right of the frame, chin slightly lowered. Her gaze rests on the phone screen at the upper right of the frame. Her lips are closed in a small smile, her eyes relaxed, the mood soft and playful. Her arm on the right of the frame is raised with the elbow bent, the hand holding a beige-cased phone in front of her face, covering it partly, its back lens facing the mirror. Her arm on the left of the frame is bent, the forearm across her waist and the hand resting on the belt, a thin gold chain bracelet hanging loosely on the wrist. A thin black bag strap sits on that shoulder, the small slouched soft bag under her arm. Her legs stand straight and close together with the weight even, the feet pointing toward the lower right of the frame, the left foot partly behind the right. She wears a fitted cream rib-knit long-sleeve top with a wide scoop neckline and a hem above the navel. Her full natural breasts, with their weight and soft gravity, shape the ribbed knit as it stretches over her chest and arms. Her neck, upper chest, cleavage and midriff show matte skin. High-waisted black flared trousers fit tightly through the hips and thighs and flare from the knee, with small folds at the hem over white chunky low-top sneakers, and a thin black belt with a small gold buckle. Her long straight hair is in a high ponytail hanging down her back to mid-back, with loose strands framing her face and a few wisps moving near her cheek. The reflection shows a bright entryway with white walls and light oak plank flooring, a potted olive tree beside a wooden bench with a cream blanket, and a woven basket beside a white door with a metal handle. A black mirror frame runs along the left edge. Bright, soft daylight from a window falls neutral to slightly cool, with very soft shadows. The background is slightly soft, with very little grain. \u7ec6\u817b \u6c1b\u56f4\u611f",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -599,6 +603,23 @@
       "cnr_id": "comfyui-krea2-conditioning",
       "aux_id": "huwhitememes/comfyui-krea2-conditioning",
       "ver": "729cda4fade982988a375b01928f515458407a5c"
+    }
+  },
+  "75": {
+    "inputs": {
+      "noise_type_sde": "pink",
+      "noise_type_sde_substep": "pink",
+      "noise_mode_sde": "hard",
+      "noise_mode_sde_substep": "hard",
+      "eta": 0.5,
+      "eta_substep": 0.5,
+      "seed": 450999338814173
+    },
+    "class_type": "ClownOptions_SDE_Beta",
+    "_meta": {
+      "title": "ClownOptions SDE",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
     }
   },
   "78": {

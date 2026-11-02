@@ -67,22 +67,6 @@
       "ver": "0.25.0"
     }
   },
-  "10": {
-    "inputs": {
-      "sage_attention": "auto",
-      "allow_compile": false,
-      "model": [
-        "46",
-        0
-      ]
-    },
-    "class_type": "PathchSageAttentionKJ",
-    "_meta": {
-      "title": "Patch Sage Attention KJ",
-      "cnr_id": "comfyui-kjnodes",
-      "ver": "f3835b7511375c13bf2fdee3377597f0ff9e8e77"
-    }
-  },
   "11": {
     "inputs": {
       "text": [
@@ -206,12 +190,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00071_.png&type=temp&subfolder=&rand=0.1742391128737053"
+            "url": "/api/view?filename=rgthree.compare._temp_qopbx_00013_.png&type=temp&subfolder=&rand=0.8785799344585902"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_lifnz_00072_.png&type=temp&subfolder=&rand=0.6110269949817545"
+            "url": "/api/view?filename=rgthree.compare._temp_qopbx_00014_.png&type=temp&subfolder=&rand=0.7029876353153761"
           }
         ]
       },
@@ -269,7 +253,7 @@
       "lora_1": {
         "on": true,
         "lora": "RealisticSnapshotKrea2_v1.0.safetensors",
-        "strength": 1.2
+        "strength": 1
       },
       "lora_2": {
         "on": true,
@@ -325,10 +309,10 @@
       "eta": 0.5,
       "sampler_name": "multistep/res_2m",
       "scheduler": "beta57",
-      "steps": 12,
-      "steps_to_run": 10,
+      "steps": 15,
+      "steps_to_run": 12,
       "denoise": 1.0,
-      "cfg": 1.3,
+      "cfg": 1.0,
       "seed": [
         "53",
         0
@@ -336,11 +320,11 @@
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [
-        "10",
+        "46",
         0
       ],
       "positive": [
-        "74",
+        "11",
         0
       ],
       "negative": [
@@ -365,8 +349,8 @@
       "eta": 0.5,
       "sampler_name": "exponential/ddim",
       "scheduler": "beta57",
-      "steps": 6,
-      "steps_to_run": 3,
+      "steps": 8,
+      "steps_to_run": 4,
       "denoise": 0.22,
       "cfg": 1.0,
       "seed": [
@@ -462,7 +446,7 @@
   },
   "53": {
     "inputs": {
-      "seed": 736116117342416
+      "seed": 760747164919274
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -520,7 +504,7 @@
   },
   "56": {
     "inputs": {
-      "s_noise": 1.0,
+      "s_noise": 0.99,
       "s_noise_substep": 1.0,
       "noise_anchor_sde": 1.0,
       "lying": 0.95,
@@ -538,7 +522,7 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, a woman straddles a man in cowgirl position inside a camper with curved fabric walls and red trim along the ceiling, her bare breasts hanging heavy under their own weight and settling toward her armpits as she shifts forward, nipples visible against her flushed skin, sweat beading on her stomach and thighs and running in thin lines down her torso, her head tilted down with eyes closed and mouth open, one hand braced on white rumpled bedding beside her hip, her thighs spread wide around his hips, her back arching slightly as she moves up and down, the man's enormous wide cock visible in her pussy as she rides him, his testicles resting against the sheets beneath them, her labia parted around his shaft and her clitoris visible above, natural daylight pouring through the oval window behind her and illuminating dust in the air, handheld smartphone capture with slight tilt and soft focus at the frame edges, skin texture showing pores and small imperfections on her shoulders and chest, unmarked skin, candid amateur framing cropped at the knees and shoulders, slight motion blur on her moving hips, a faint lens smudge near the bottom edge. \u7ec6\u817b \u6c1b\u56f4\u611f",
+      "multiline_text": "l4cie, a close handheld front-camera capture, slightly off-centre with mild perspective distortion at the edges. A woman tilts her head to the right side of the frame with her chin slightly raised. Her gaze looks directly at the camera. Lips form a pout while her eyes stay open beneath defined brows. The torso leans forward toward the camera in a slight twist. The arm on the left of the frame appears partially raised while holding the camera. Long straight hair falls over the shoulders and across the frame. A dark sequined top shows its low-cut neckline. Full natural breasts whose weight and soft gravity shape the fabric. The material rests and drapes naturally over them with slight natural movement. Shiny sequins catch the light across the fabric. The face neck shoulders upper chest and cleavage fill most of the vertical frame. Matte skin receives dim frontal artificial light with cool tones. Highlights appear on the face from that light source. The dark indistinct background sits at night behind her. Grainy low-light noise spreads through the shadows. Slight motion blur softens parts of the scene. Soft focus reduces overall detail in the capture. The frame cuts off at the upper chest with the top of the head partially out of frame. The image feels like a quick unedited phone snap sent to a friend. Visible phone sensor grain mixes with the low light. A hint of JPEG compression artifacts appears in darker areas. \u7ec6\u817b \u6c1b\u56f4\u611f",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -582,42 +566,20 @@
       "ver": "0.39.0"
     }
   },
-  "74": {
+  "72": {
     "inputs": {
-      "preset": "balanced",
-      "per_layer_weights": "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
-      "multiplier": 1.0,
-      "renormalize": true,
-      "conditioning": [
-        "11",
-        0
-      ]
+      "enabled": true,
+      "mode": "auto",
+      "limit": 0.02,
+      "skip_when_clean": true,
+      "grid_gain": 10,
+      "grid_view": "4x zoom"
     },
-    "class_type": "ConditioningKrea2Rebalance",
+    "class_type": "VAEDeGrid",
     "_meta": {
-      "title": "\ud83c\udf9b\ufe0f Krea 2 Conditioning Control",
-      "aux_id": "huwhitememes/comfyui-krea2-conditioning",
-      "ver": "729cda4fade982988a375b01928f515458407a5c"
-    }
-  },
-  "78": {
-    "inputs": {
-      "upscale": -1,
-      "tile": false,
-      "tile_size": 512,
-      "overlap": 64,
-      "temporal_size": 4096,
-      "temporal_overlap": 64,
-      "samples": [
-        "48",
-        1
-      ]
-    },
-    "class_type": "VAEUtils_VAEDecodeTiled",
-    "_meta": {
-      "title": "VAE Decode (VAE Utils)",
-      "aux_id": "spacepxl/ComfyUI-VAE-Utils",
-      "ver": "4c62ea005897fafbc593d69bedb8308ec9f932fd"
+      "title": "VAE DeGrid (Nyquist Notch)",
+      "aux_id": "lunaaispace-eng/ComfyUI-DeGrid",
+      "ver": "42ba59d7dec0bdafd80adce8bbe824744c8113de"
     }
   }
 }

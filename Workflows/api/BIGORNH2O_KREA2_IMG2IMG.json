@@ -212,20 +212,6 @@
       "ver": "0.16.4"
     }
   },
-  "205": {
-    "inputs": {
-      "images": [
-        "195",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Upscaling",
-      "cnr_id": "comfy-core",
-      "ver": "0.16.4"
-    }
-  },
   "227": {
     "inputs": {
       "samples": [
@@ -334,20 +320,6 @@
       "ver": "0.44.0"
     }
   },
-  "272": {
-    "inputs": {
-      "images": [
-        "248:159",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image",
-      "cnr_id": "comfy-core",
-      "ver": "0.44.0"
-    }
-  },
   "276": {
     "inputs": {
       "lora_name": "l4cie_Lora_000002000.safetensors",
@@ -370,7 +342,7 @@
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
-      "title": "Seed (rgthree)",
+      "title": "API_SEED_2",
       "cnr_id": "rgthree-comfy",
       "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
     }
@@ -381,7 +353,7 @@
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
-      "title": "Seed (rgthree)",
+      "title": "API_SEED_1",
       "cnr_id": "rgthree-comfy",
       "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
     }
@@ -467,142 +439,24 @@
       "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
     }
   },
-  "248:160": {
+  "319": {
     "inputs": {
-      "text": "l4cie,",
-      "clip": [
-        "138",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)",
-      "cnr_id": "comfy-core",
-      "ver": "0.27.0"
-    }
-  },
-  "248:161": {
-    "inputs": {
-      "conditioning": [
-        "248:160",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Conditioning Zero Out",
-      "cnr_id": "comfy-core",
-      "ver": "0.27.0"
-    }
-  },
-  "248:162": {
-    "inputs": {
-      "model_name": "bbox/face_yolov8m.pt"
-    },
-    "class_type": "UltralyticsDetectorProvider",
-    "_meta": {
-      "title": "UltralyticsDetectorProvider",
-      "cnr_id": "comfyui-impact-subpack",
-      "ver": "1.3.5"
-    }
-  },
-  "248:163": {
-    "inputs": {
-      "model_name": "sam_vit_b_01ec64.pth",
-      "device_mode": "AUTO"
-    },
-    "class_type": "SAMLoader",
-    "_meta": {
-      "title": "SAMLoader (Impact)",
-      "cnr_id": "comfyui-impact-pack",
-      "ver": "8.28.1"
-    }
-  },
-  "248:166": {
-    "inputs": {
-      "shift": 0.65,
-      "sampling": "flow",
-      "model": [
-        "276",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingAuraFlow",
-    "_meta": {
-      "title": "ModelSamplingAuraFlow",
-      "cnr_id": "comfy-core",
-      "ver": "0.27.0"
-    }
-  },
-  "248:159": {
-    "inputs": {
-      "guide_size": 1024.0,
-      "guide_size_for": true,
-      "max_size": 1024.0,
-      "seed": 446700986820556,
-      "steps": 4,
-      "cfg": 1.0,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.5,
-      "feather": 27,
-      "noise_mask": true,
-      "force_inpaint": true,
-      "bbox_threshold": 0.214000244140625,
-      "bbox_dilation": 35,
-      "bbox_crop_factor": 1.2000000000000002,
-      "sam_detection_hint": "center-1",
-      "sam_dilation": 30,
-      "sam_threshold": 0.93,
-      "sam_bbox_expansion": 0,
-      "sam_mask_hint_threshold": 0.7,
-      "sam_mask_hint_use_negative": "False",
-      "drop_size": 10,
-      "wildcard": "",
-      "cycle": 1,
-      "inpaint_model": false,
-      "noise_mask_feather": 20,
-      "tiled_encode": false,
-      "tiled_decode": false,
-      "image": [
+      "filename_prefix": "IMG",
+      "format": "png",
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16 Pro Max",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "images": [
         "195",
         0
-      ],
-      "model": [
-        "248:166",
-        0
-      ],
-      "clip": [
-        "138",
-        1
-      ],
-      "vae": [
-        "111",
-        0
-      ],
-      "positive": [
-        "248:160",
-        0
-      ],
-      "negative": [
-        "248:161",
-        0
-      ],
-      "bbox_detector": [
-        "248:162",
-        0
-      ],
-      "sam_model_opt": [
-        "248:163",
-        0
       ]
     },
-    "class_type": "FaceDetailer",
+    "class_type": "SaveImageWithFakeEXIF",
     "_meta": {
-      "title": "FaceDetailer",
-      "cnr_id": "comfyui-impact-pack",
-      "ver": "8.28.3"
+      "title": "API_SAVE",
+      "aux_id": "Bigornh2o/ComfyUI-FakeEXIF",
+      "ver": "b343f0ac6163265696b93d7efe39c1750087abb2"
     }
   }
 }

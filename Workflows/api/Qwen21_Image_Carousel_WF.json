@@ -1,0 +1,310 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "4": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "bfs_head_v1.1_qwen_2.1.safetensors",
+        "strength": 0.9
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "p_qwen_image_2.1_8step_v0.1.safetensors",
+        "strength": 1
+      },
+      "\u2795 Add Lora": "",
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "0.37.0"
+    }
+  },
+  "8": {
+    "inputs": {
+      "image": "image (2).png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "API_LOAD_IMAGE",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.0"
+    }
+  },
+  "10": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": [
+        "11",
+        0
+      ],
+      "height": [
+        "11",
+        1
+      ],
+      "crop": "disabled",
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.0"
+    }
+  },
+  "11": {
+    "inputs": {
+      "megapixel": "2.4",
+      "aspect_ratio": "9:16 (Slim Vertical)",
+      "divisible_by": 8,
+      "max_long_side": 2048,
+      "smart_cap_enable": true
+    },
+    "class_type": "SmartFluxResolution",
+    "_meta": {
+      "title": "Smart Flux Resolution",
+      "aux_id": "Bigornh2o/ComfyUI-Bigornh2oSmartResolution",
+      "ver": "b9e701a5efe86a64260354c46e67b7b187c52d16"
+    }
+  },
+  "16": {
+    "inputs": {
+      "any_02": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "18": {
+    "inputs": {
+      "string": [
+        "16",
+        0
+      ],
+      "find": "[POSE]",
+      "replace": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "19": {
+    "inputs": {
+      "prompt": [
+        "18",
+        0
+      ],
+      "negative_prompt": "",
+      "resolution": 0,
+      "clip": [
+        "4",
+        1
+      ],
+      "images.image_1": [
+        "10",
+        0
+      ],
+      "images.image_2": [
+        "49",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImage21",
+    "_meta": {
+      "title": "Text Encode Qwen Image 2.1",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "20": {
+    "inputs": {
+      "seed": 101,
+      "steps": 25,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "19",
+        0
+      ],
+      "negative": [
+        "19",
+        1
+      ],
+      "latent_image": [
+        "19",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "21": {
+    "inputs": {
+      "filename_prefix": "IMG",
+      "format": "png",
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16 Pro Max",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "images": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "SaveImageWithFakeEXIF",
+    "_meta": {
+      "title": "API_SAVE",
+      "aux_id": "Bigornh2o/ComfyUI-FakeEXIF",
+      "ver": "b343f0ac6163265696b93d7efe39c1750087abb2"
+    }
+  },
+  "28": {
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.0"
+    }
+  },
+  "29": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": "she is smiling with the same smile as in <image2>, head tilted slightly to one side on the pillow, her free hand out of frame\nshe is smiling with the same smile as in <image2>, her free hand resting on the pillow next to her face, head turned slightly toward it\nsoft pout, lips slightly parted, her free hand lifted to her neck, fingers lightly holding the thin necklace chain, eyes looking straight into the camera\neyes half closed, relaxed sleepy expression, head sunk a little deeper into the pillow, chin slightly lowered, her free hand out of frame\nshe is smiling with the same smile as in <image2>, her free hand partly covering her mouth and chin, eyes slightly squinting from the smile",
+      "append_text": "",
+      "start_index": 0,
+      "max_rows": 1000
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "API_PROMPT",
+      "cnr_id": "ComfyUI_Comfyroll_CustomNodes",
+      "aux_id": "Suzie1/ComfyUI_Comfyroll_CustomNodes",
+      "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca"
+    }
+  },
+  "47": {
+    "inputs": {
+      "value": "<image1> is the photo to edit. Keep the scene, background, lighting, outfit and hair of <image1> exactly as they are. The camera angle and framing may shift slightly, as if the photo was taken a few seconds later. Change only the body pose and expression of the person in <image1>: [POSE]. Use <image2> only as a reference for the facial features and smile. Do not copy its head angle, head size, lighting or hair. The head keeps the size and lighting of <image1>. Frozen still moment, no motion blur, no double exposure."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text (Multiline)",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "48": {
+    "inputs": {
+      "image": "ComfyUI_temp_midod_00008_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "49": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 32,
+      "image": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  }
+}

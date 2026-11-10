@@ -190,12 +190,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_qopbx_00013_.png&type=temp&subfolder=&rand=0.8785799344585902"
+            "url": "/api/view?filename=rgthree.compare._temp_efgdo_00001_.png&type=temp&subfolder=&rand=0.3186628472121854"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_qopbx_00014_.png&type=temp&subfolder=&rand=0.7029876353153761"
+            "url": "/api/view?filename=rgthree.compare._temp_efgdo_00002_.png&type=temp&subfolder=&rand=0.018867952186014225"
           }
         ]
       },
@@ -309,8 +309,8 @@
       "eta": 0.5,
       "sampler_name": "multistep/res_2m",
       "scheduler": "beta57",
-      "steps": 15,
-      "steps_to_run": 12,
+      "steps": 12,
+      "steps_to_run": 10,
       "denoise": 1.0,
       "cfg": 1.0,
       "seed": [
@@ -351,7 +351,7 @@
       "scheduler": "beta57",
       "steps": 8,
       "steps_to_run": 4,
-      "denoise": 0.22,
+      "denoise": 0.21,
       "cfg": 1.0,
       "seed": [
         "54",
@@ -522,7 +522,7 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, a close handheld front-camera capture, slightly off-centre with mild perspective distortion at the edges. A woman tilts her head to the right side of the frame with her chin slightly raised. Her gaze looks directly at the camera. Lips form a pout while her eyes stay open beneath defined brows. The torso leans forward toward the camera in a slight twist. The arm on the left of the frame appears partially raised while holding the camera. Long straight hair falls over the shoulders and across the frame. A dark sequined top shows its low-cut neckline. Full natural breasts whose weight and soft gravity shape the fabric. The material rests and drapes naturally over them with slight natural movement. Shiny sequins catch the light across the fabric. The face neck shoulders upper chest and cleavage fill most of the vertical frame. Matte skin receives dim frontal artificial light with cool tones. Highlights appear on the face from that light source. The dark indistinct background sits at night behind her. Grainy low-light noise spreads through the shadows. Slight motion blur softens parts of the scene. Soft focus reduces overall detail in the capture. The frame cuts off at the upper chest with the top of the head partially out of frame. The image feels like a quick unedited phone snap sent to a friend. Visible phone sensor grain mixes with the low light. A hint of JPEG compression artifacts appears in darker areas. \u7ec6\u817b \u6c1b\u56f4\u611f",
+      "multiline_text": "l4cie, a front-camera selfie taken lying in bed, close medium shot from directly above, her right arm stretched out toward the lower left corner and leaving the frame, the lens angled down over her face and chest, the frame tilted so she lies diagonally from her head at the upper left to her chest at the lower right. The close-range wide-angle lens makes her near shoulder and chest loom large while her head sits slightly smaller toward the top. She lies on her back on a rumpled white cotton sheet, her head turned slightly toward her shoulder, and looks into the lens with heavy-lidded eyes and closed lips pressed into a soft, knowing smirk. She wears a white ribbed cotton tank top with a wide scoop neckline and a very fine gold chain at her collarbone. Lying on her back, her full round natural breasts settle with soft natural weight toward her sides and press together in deep cleavage at the scoop neckline, the ribbed cotton stretched taut over them. The white sheet fills most of the frame around her in soft creases, with a sliver of beige floor at the upper right corner. Soft, diffused daylight from above lights her face and chest evenly, leaving gentle shadow under her jaw and in the creases of the sheet. Phone camera look with deep focus, phone HDR, mild JPEG softness and natural, true-to-life colour.",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000

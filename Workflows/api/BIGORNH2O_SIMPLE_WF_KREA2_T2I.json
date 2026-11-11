@@ -55,7 +55,7 @@
   },
   "67": {
     "inputs": {
-      "text": "l4cie, a smartphone photo taken by someone standing a few steps in front of her on a beach, three-quarter-length shot cropped at the shins, the camera held at chest height and angled slightly downward, the frame tilted a few degrees to the left. She stands facing the camera with both hands tucked into the pockets of her sweatpants, her shoulders rolled slightly forward and her head tilted a touch to one side, smiling widely at the lens with her teeth showing. She wears a black string triangle bikini top tied at the neck and back, and loose light heather-grey cotton wide-leg sweatpants slung low on her hips, with the black side ties of her bikini bottoms pulled up high above the waistband on both hips. A fine gold chain with a small pendant rests at her collarbone, and thin gold bracelets sit on both wrists. She has a narrow waist, a toned flat stomach with a plain belly button and slim arms. Her full round natural breasts press together with natural weight in the small black triangles, creating deep cleavage. Behind her, white sand marked with footprints stretches back to a pale sea on the left with a few tiny figures at the waterline. On the right, low green sea grape shrubs line the sand beneath tall palm trees and a cream villa with a terracotta tile roof. A pale, overcast sky gives soft, even daylight that lights her from the front without hard shadows. Phone camera look with deep focus, phone HDR holding the bright sky, mild JPEG softness and natural, true-to-life colour.",
+      "text": "l4cie, a flat 2D cartoon illustration in a 2000s TV-animation style, with thick, even black outlines, flat solid colours, a single hard-edged cel shadow on each shape, simplified angular anatomy with long legs and a narrow waist, and minimal background detail. She is drawn from a low viewpoint at mattress level in front of her, kneeling upright on her bed and facing the viewer. She sits back on her heels with her knees slightly apart and towers toward the top of the frame, cut off at the knees at the bottom edge and just above her head at the top. She wears only an oversized white button-up shirt, worn open, slipping off both shoulders and gathered at her elbows. Her right hand pulls the two front panels together over her chest, holding them closed and covering her breasts completely, and the long shirt tails fall over her lap and cover her hips, leaving her thighs bare. Her left hand rests flat on the sheet beside her knee. She tilts her head and looks down at the viewer with half-lowered, unimpressed eyelids and one eyebrow raised, biting the corner of her lower lip in a smug half-smile. Her loose hair falls over her shoulders in long, smooth, flat-coloured sections. Her very large, full, heavy breasts press into her forearm under the gathered shirt, the soft fullness swelling above her arm into a deep line of cleavage, drawn as clean rounded shapes with a single flat shadow underneath. Simple pale blue sheets and a crumpled duvet surround her knees. Behind her, a plain beige wall holds a window with a white frame showing flat blue sky. Flat, even lighting is cut by one hard shadow tone along her right side, under the shirt panels and below her chin.",
       "clip": [
         "72",
         1
@@ -63,14 +63,17 @@
     },
     "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)",
+      "title": "API_PROMPT",
       "cnr_id": "comfy-core",
       "ver": "0.3.73"
     }
   },
   "70": {
     "inputs": {
-      "seed": 42,
+      "seed": [
+        "102",
+        0
+      ],
       "steps": 8,
       "cfg": 1.0,
       "sampler_name": "res_multistep",
@@ -126,13 +129,13 @@
         "strength": 1
       },
       "lora_2": {
-        "on": true,
+        "on": false,
         "lora": "WeightSlider-KREA2_v2.safetensors",
         "strength": 0.25
       },
       "lora_3": {
         "on": true,
-        "lora": "realism_engine_krea2_v3.1.safetensors",
+        "lora": "lenovo_krea2.safetensors",
         "strength": 0.5
       },
       "lora_4": {
@@ -194,7 +197,7 @@
   },
   "75": {
     "inputs": {
-      "megapixel": "2.4",
+      "megapixel": "2.0",
       "aspect_ratio": "9:16 (Slim Vertical)",
       "divisible_by": 8,
       "max_long_side": 2048,
@@ -230,6 +233,243 @@
       "cnr_id": "RES4LYF",
       "aux_id": "ClownsharkBatwing/RES4LYF",
       "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
+    }
+  },
+  "77": {
+    "inputs": {
+      "upscale_model": [
+        "82",
+        0
+      ],
+      "image": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.45"
+    }
+  },
+  "78": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "scale_by": 0.5,
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "ImageScaleBy",
+    "_meta": {
+      "title": "Upscale Image By",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.45"
+    }
+  },
+  "80": {
+    "inputs": {
+      "pixels": [
+        "78",
+        0
+      ],
+      "vae": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.45"
+    }
+  },
+  "82": {
+    "inputs": {
+      "model_name": "4xNomosWebPhoto_RealPLKSR.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.45"
+    }
+  },
+  "95": {
+    "inputs": {
+      "samples": [
+        "100",
+        1
+      ],
+      "vae": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.0"
+    }
+  },
+  "97": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_imken_00003_.png&type=temp&subfolder=&rand=0.12331138161406852"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_imken_00004_.png&type=temp&subfolder=&rand=0.0036570461957906586"
+          }
+        ]
+      },
+      "image_a": [
+        "65",
+        0
+      ],
+      "image_b": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "99": {
+    "inputs": {
+      "s_noise": 0.99,
+      "s_noise_substep": 1.0,
+      "noise_anchor_sde": 1.0,
+      "lying": 0.95,
+      "lying_inv": 1.0,
+      "lying_start_step": 0,
+      "lying_inv_start_step": 1
+    },
+    "class_type": "ClownOptions_SigmaScaling_Beta",
+    "_meta": {
+      "title": "ClownOptions Sigma Scaling",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
+    }
+  },
+  "100": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "exponential/ddim",
+      "steps_to_run": -1,
+      "cfg": 1.0,
+      "sampler_mode": "resample",
+      "bongmath": true,
+      "model": [
+        "73",
+        0
+      ],
+      "positive": [
+        "67",
+        0
+      ],
+      "negative": [
+        "71",
+        0
+      ],
+      "latent_image": [
+        "101",
+        0
+      ],
+      "options_group.options0": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "ClownsharkChainsampler_Beta",
+    "_meta": {
+      "title": "ClownsharkChainsampler",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
+    }
+  },
+  "101": {
+    "inputs": {
+      "eta": 0.5,
+      "sampler_name": "exponential/ddim",
+      "scheduler": "beta57",
+      "steps": 6,
+      "steps_to_run": 3,
+      "denoise": 0.21,
+      "cfg": 1.0,
+      "seed": [
+        "102",
+        0
+      ],
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "73",
+        0
+      ],
+      "positive": [
+        "67",
+        0
+      ],
+      "negative": [
+        "71",
+        0
+      ],
+      "latent_image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "\u26a1ClownsharKSampler\u26a1",
+      "cnr_id": "RES4LYF",
+      "aux_id": "ClownsharkBatwing/RES4LYF",
+      "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
+    }
+  },
+  "102": {
+    "inputs": {
+      "seed": 967894766766063
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "API_SEED",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "106": {
+    "inputs": {
+      "filename_prefix": "IMG",
+      "format": "png",
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16 Pro Max",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "images": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "SaveImageWithFakeEXIF",
+    "_meta": {
+      "title": "API_SAVE",
+      "aux_id": "Bigornh2o/ComfyUI-FakeEXIF",
+      "ver": "b343f0ac6163265696b93d7efe39c1750087abb2"
     }
   }
 }

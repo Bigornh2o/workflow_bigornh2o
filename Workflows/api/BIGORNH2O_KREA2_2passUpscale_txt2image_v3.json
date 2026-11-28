@@ -190,12 +190,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_dnpou_00013_.png&type=temp&subfolder=&rand=0.578586216572116"
+            "url": "/api/view?filename=rgthree.compare._temp_vpfoc_00059_.png&type=temp&subfolder=&rand=0.8801595014110001"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_dnpou_00014_.png&type=temp&subfolder=&rand=0.37235776735795245"
+            "url": "/api/view?filename=rgthree.compare._temp_vpfoc_00060_.png&type=temp&subfolder=&rand=0.2078610636098921"
           }
         ]
       },
@@ -351,7 +351,7 @@
       "scheduler": "beta57",
       "steps": 8,
       "steps_to_run": 4,
-      "denoise": 0.21,
+      "denoise": 0.2,
       "cfg": 1.0,
       "seed": [
         "54",
@@ -390,7 +390,7 @@
       "aspect_ratio": "3:4 (Golden Ratio)",
       "divisible_by": 8,
       "max_long_side": 2048,
-      "smart_cap_enable": true
+      "smart_cap_enable": false
     },
     "class_type": "SmartFluxResolution",
     "_meta": {
@@ -446,7 +446,7 @@
   },
   "53": {
     "inputs": {
-      "seed": 598632018271755
+      "seed": 639917749168833
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -457,7 +457,7 @@
   },
   "54": {
     "inputs": {
-      "seed": 884815338343411
+      "seed": 115442877703817
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -522,7 +522,7 @@
   "57": {
     "inputs": {
       "prepend_text": "",
-      "multiline_text": "l4cie, an amateur smartphone snapshot taken at night by someone standing over her, looking down at her from a high angle. She sits low on a worn grey stone doorstep in front of a tall, old black wooden door with heavy panels. On the left are a weathered yellow-brick wall with a small round metal plaque and a black iron handrail, and the bare sidewalk runs across the lower left. She sits with her knees drawn up and her forearms resting on them. Her right hand dangles forward over her knee holding a single lit cigarette loosely between two fingers, with gold rings on her fingers. Her left hand is empty and rests lightly on top of her right wrist. She tilts her head up and looks straight into the lens with a soft, closed-mouth half smile. Her loose, slightly tousled hair falls to her shoulders. She wears an oversized pale grey wool turtleneck sweater with long sleeves pulled down over her wrists, faded grey straight-leg jeans and chestnut suede Ugg boots. A black leather shoulder bag hangs from her shoulder and rests against her hip on the step. Slightly soft amateur night snapshot with visible grain, warm muted tones, deep dark shadows around the door and a candid, unposed feel.",
+      "multiline_text": "l4cie, badly framed, crooked amateur selfie in a steep high-angle style, the whole image tilted so her body runs diagonally from the upper right to the lower left corner. Her right arm stretches up and out to the side, holding the camera far above her and pointing it steeply down. Her right shoulder sits close to the lens, large and cut by the right edge. Her face is pushed against the right edge, cut so only her lips and chin show. She stands on light oak herringbone parquet, framed from her chin down to her feet, foreshortened from above with a strong wide-angle effect. She wears an open burgundy bomber jacket with ribbed cuffs and hem, slipping off her left shoulder. Under it she wears a white ribbed tank top with wide, deep armholes and a low scooped neckline. Her full, natural breasts sit with natural weight, overflowing at the neckline and the armhole into a deep cleavage. She also wears loose low-rise light-wash baggy jeans sitting low on her hips, showing her flat stomach. A small brown monogram canvas pouch hangs on a thin gold chain across her body at her hip. She wears chestnut suede slipper boots. Her left hand makes a peace sign beside her face, a fine gold chain bracelet on her wrist. Her long, loose hair falls forward over her right shoulder and chest. Around her are a white desk, a cream boucl\u00e9 chair on a chrome base, and the corner of a white door at the lower right edge. Soft, flat indoor light. Amateur phone snap, slightly dark and underexposed, with muted cool grey tones, soft contrast and light grain.",
       "append_text": "",
       "start_index": 0,
       "max_rows": 1000
@@ -552,10 +552,10 @@
   },
   "69": {
     "inputs": {
-      "lora_name": "l4cie_Lora_000002000.safetensors",
-      "strength_model": 0.8,
+      "lora_name": "l4cie_Lora.safetensors",
+      "strength_model": 1.0,
       "model": [
-        "77",
+        "9",
         0
       ]
     },
@@ -582,20 +582,210 @@
       "ver": "42ba59d7dec0bdafd80adce8bbe824744c8113de"
     }
   },
-  "77": {
+  "333": {
     "inputs": {
-      "lora_name": "RealisticSnapshotKrea2_v1.0.safetensors",
-      "strength_model": 1.0,
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_csbea_00055_.png&type=temp&subfolder=&rand=0.430026527357495"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_csbea_00056_.png&type=temp&subfolder=&rand=0.18753373097831216"
+          }
+        ]
+      },
+      "image_a": [
+        "339",
+        0
+      ],
+      "image_b": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "8ff50e4521881eca1fe26aec9615fc9362474931"
+    }
+  },
+  "334": {
+    "inputs": {
+      "text": "l4cie,",
+      "clip": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "335": {
+    "inputs": {
+      "conditioning": [
+        "334",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "336": {
+    "inputs": {
+      "model_name": "bbox/face_yolov9c.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider",
+      "cnr_id": "comfyui-impact-subpack",
+      "ver": "1.3.5"
+    }
+  },
+  "337": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "AUTO"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)",
+      "cnr_id": "comfyui-impact-pack",
+      "ver": "8.28.1"
+    }
+  },
+  "338": {
+    "inputs": {
+      "shift": 0.65,
+      "sampling": "flow",
       "model": [
-        "9",
+        "46",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "339": {
+    "inputs": {
+      "guide_size": 1024.0,
+      "guide_size_for": true,
+      "max_size": 2048.0,
+      "seed": 446700986820556,
+      "steps": 3,
+      "cfg": 1.0,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 0.16,
+      "feather": 27,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.214000244140625,
+      "bbox_dilation": 35,
+      "bbox_crop_factor": 1.2000000000000002,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 30,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "20",
+        0
+      ],
+      "model": [
+        "340",
+        0
+      ],
+      "clip": [
+        "7",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ],
+      "positive": [
+        "334",
+        0
+      ],
+      "negative": [
+        "335",
+        0
+      ],
+      "bbox_detector": [
+        "336",
+        0
+      ],
+      "sam_model_opt": [
+        "337",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "FaceDetailer",
+      "cnr_id": "comfyui-impact-pack",
+      "ver": "8.28.3"
+    }
+  },
+  "340": {
+    "inputs": {
+      "lora_name": "l4cie_Lora.safetensors",
+      "strength_model": 0.6,
+      "model": [
+        "46",
         0
       ]
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Load LoRA",
+      "title": "LOAD CHARACTER LORA",
       "cnr_id": "comfy-core",
-      "ver": "0.45.4"
+      "ver": "0.39.0"
+    }
+  },
+  "343": {
+    "inputs": {
+      "filename_prefix": "IMG",
+      "format": "png",
+      "camera_make": "Apple",
+      "camera_model": "iPhone 16 Pro Max",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "images": [
+        "339",
+        0
+      ]
+    },
+    "class_type": "SaveImageWithFakeEXIF",
+    "_meta": {
+      "title": "API_SAVE",
+      "aux_id": "Bigornh2o/ComfyUI-FakeEXIF",
+      "ver": "b343f0ac6163265696b93d7efe39c1750087abb2"
     }
   }
 }
